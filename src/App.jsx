@@ -28,7 +28,7 @@ function App() {
     set_messages((messages) => [...messages, user_message]);
 
     try {
-      const res = await fetch("https://devtestingsus.ovh:25577/chat", {
+      const res = await fetch("http://devtestingsus.ovh:25577/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: text_to_send }),
